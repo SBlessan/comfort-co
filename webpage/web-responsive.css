@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat&family=Poppins&family=Space+Mono&display=swap');
+
+
+#nav_responsive {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color:black;
+    padding-bottom: 100%;
+    height:100vh;
+    padding-right: 30%;
+   
+    font-family: 'Montserrat', sans-serif;
+    left: -100%;
+   
+    transition: 1s;
+}
+
+#nav_responsive.active{
+    display: block;
+    left: 0%;
+    z-index:10;
+    
+
+}
+#nav_responsive p {
+    font-size: 20px;
+    margin: 10px;
+    margin-bottom:55px;
+}
+
+
+.nav_close{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top:5px;
+    right: 10px;
+}
+
+/* Accordion */
+
+.plus{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    margin-left: 10px;
+    right: 20px;
+    top: 20px;
+    display: none;
+}
+
+.section1,.section2,.section3{
+    position: relative;
+}
+.section1_drop,.section2_drop,.section3_drop{
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+#accordian_one ,#accordian_two ,#accordian_three{
+    display: flex;
+    flex-direction: column;
+}
+
+#accordian_one.active{
+    display: block;
+    flex-direction: column;
+}
+
+
+
+.section_drop.active {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width:599px){
+    .plus{
+        display: block;
+    }
+    .section_drop{
+        display: none;
+    }
+    #accordian_one ,#accordian_two ,#accordian_three{
+        display: none;
+        
+    }
+}
+
+#accordian_one.active , #accordian_two.active , #accordian_three.active{
+    display: flex;
+}
+
+/* Button Color Change */
+
+
+/* Product Scroll */
+.arrivals {
+    position: relative;
+}
+
+#button_right{
+    position:absolute;
+    right: 0;
+    top: 250px;
+    z-index: 5;
+   
+}
+
+#button_left{
+    position:absolute;
+    left: 0;
+    top: 250px;
+    z-index: 5;
+   
+}
+
+.shoes{
+    overflow: hidden;
+}
+
+.scroll_img {
+    height: 277px;
+    
+}
+.arrow-icon{
+    height: 70px;
+    width: 30px;
+    background-color: white;
+    
+}
+
+/* Banner scroll */
+
+.banner2_outer {
+    position: relative;
+}
+.banner2{
+    position: relative;
+    max-width: 1920px;
+    overflow: hidden;
+    
+}
+.banner_scroll{
+    width: 100%;
+    height: auto;
+    
+}
+
+#new_arrow_R{
+    position: absolute;
+    right: 0;
+    top: 40%;
+    height: 30px;
+    z-index: 5;
+}
+#new_arrow_L{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    height: 30px;
+    z-index: 5;
+}
+
+
+.drop_down.active .section_drop {
+
+    display: block;
+}

@@ -4,8 +4,11 @@
         <title>Webpage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="webpage.css" rel="stylesheet">
+        <link href = "web-responsive.css" rel = "stylesheet">
+        
+        
     </head>
-    <body>
+    <body class="body_main">
         <header>
 <!--Black Header-->
             <div class="black">
@@ -13,9 +16,10 @@
             </div>
 <!--White Header-->
             <div class="white">
-                    <div class="hamburger_div">
-                        <img class="hamburger" src="./hamburger-menu-icon.png">
-                    </div>
+                    <div class="hamburger_div" id="hamburger_id">
+                        <img class="hamburger active" src="./hamburger-menu-icon.png" >
+                       
+                    </div> 
                     <div class="image">
                         <img class="comfort" src="./ComfortCo.png" >
                     </div>
@@ -35,6 +39,21 @@
                         <img class="icon" src = "./cart.png">
                     </div>
             </div>
+
+<!-- Nav - Responsive -->
+<div id = "nav_responsive">
+    <p>All Categories</p>
+    <img class="nav_close" src="./close3.png" onclick="close_hamburger()">
+    <p class="bar">Women</p>
+    <p class="bar">Men</p>
+    <p class="bar">Brand</p>
+    <p class="bar">Sales</p>
+</div>
+
+
+
+
+
 <!--Banner 1-->
 <div class="banner1">
     <div class="bannersize">
@@ -70,13 +89,41 @@
 
         <main>
 <!-- BANNER 2-->
-           <div  class="banner2">
-                <div class="empty_banner2">
+        <div class = "banner2_outer">
+            <div  class="banner2" id="Banner2">
+                <img class="banner_scroll" src = "./banner_scroll1.png" id="banner_scroll1">
+                
+                
+                <img class="arrow-icon " id="new_arrow_L" src="./arrow-icon-left.png" onclick="plusSlides(-1)">
+                <img class="arrow-icon" id="new_arrow_R" src="./arrow-icon-right.png" onclick="plusSlides(1)">
+              
 
-                </div>
+            </div>
+        </div>
+
+        <div class = "banner2_outer">
+            <div class="banner2">
+                <img class="banner_scroll" src="banner_scroll2.png" id="banner_scroll2">
+                <img class="arrow-icon " id="new_arrow_L" src="./arrow-icon-left.png" onclick="plusSlides(-1)">
+                <img class="arrow-icon" id="new_arrow_R" src="./arrow-icon-right.png" onclick="plusSlides(1)">
+            </div>
+
+        </div>
+
+        <div class = "banner2_outer">
+
+            <div class="banner2">
+                <img class="banner_scroll" src="./banner_scroll3.png" id="banner_scroll3">
+                <img class="arrow-icon " id="new_arrow_L" src="./arrow-icon-left.png" onclick="plusSlides(-1)">
+                <img class="arrow-icon" id="new_arrow_R" src="./arrow-icon-right.png" onclick="plusSlides(1)">
+            </div>
+        </div>
 
 
-                <div class="bannertext">
+
+
+
+                <!-- <div class="bannertext">
                     <div class="inside_bannertext">
                         <div   class="select">
                             <p >SELECT STYLES UP TO <br><span id="visible" >40% OFF</span></p>
@@ -92,55 +139,102 @@
                             <input type="button" value="Shop Now">
                         </div>
                     </div>
-                </div>
-           </div>
+                </div> -->
+           <!-- </div> -->
 
 <!--NEW ARRIVALS-->
     
            <div class="arrivals">
+                <button id = "button_right">Right</button>
+                <button id = "button_left">Left</button>
                 <div class="newarrival">
                 <div class="title_arrival">
                     <p class="new_arrival_p" id="imp_p">NEW ARRIVALS</p>
+                    
                     <a class="new_arrival_viewall" href="">VIEW ALL</a>
                 </div>
                 
                 </div>
-                <div class="shoes">
-                    <div class="betty">
-                        <div class="same">
+                <div class="shoes" id="shoes_id">
+                    <div class="betty" >
+                        <div class="same" id="Betty_main">
                             <img class="normal" src="./betty1.png">
                             <img class="transition" src="./betty2.png">
                     
-                            <p class="first_line bold shoe_font" >Betty Low Heels</p>
-                            <p class="shoe_font">White Back Strap</p>
-                            <p class="bold shoe_font">515 AED</p>
+                            <p class="first_line bold shoe_font betty_details" >Betty Low Heels</p>
+                            <p class="shoe_font betty_details">White Back Strap</p>
+                            <p class="bold shoe_font betty_details">515 AED</p>
                         </div>
                     </div>
                     <div class="baldwin">
-                        <div class="same">
+                        <div class="same"  id = "Baldwin_main">
                             <img class="normal" src="./baldwin.png">
                             <img class="transition" src="./baldwin2.png">
-                            <p class="bold first_line shoe_font">Baldwin Laceup Sneakers</p>
-                            <p class="shoe_font">White Back Strap</p>
-                            <p class="bold shoe_font">460 AED</p>
+                            <p class="bold first_line shoe_font baldwin_details">Baldwin Laceup Sneakers</p>
+                            <p class="shoe_font baldwin_details">White Back Strap</p>
+                            <p class="bold shoe_font baldwin_details">460 AED</p>
                         </div>
                     </div>
                     <div class="sofia">
-                        <div class="same">
+                        <div class="same" id = "Sofia_main">
                             <img class="normal" src="./sofia.png">
                             <img class="transition" src="./sofia2.png">
-                            <p class="bold first_line shoe_font">Sofia Heeled Sandal</p>
-                            <p class="shoe_font">White Back Strap</p>
-                            <p class="bold shoe_font">460 AED</p>
+                            <p class="bold first_line shoe_font sofia_details">Sofia Heeled Sandal</p>
+                            <p class="shoe_font sofia_details">White Back Strap</p>
+                            <p class="bold shoe_font sofia_details">460 AED</p>
                         </div>
                     </div>
                     <div class="beacon">
-                        <div class="same">
+                        <div class="same" id = "Beacon_main">
                             <img class="normal" src="./beacon.png">
                             <img class="transition" src="./beacon2.png">
-                            <p class="bold first_line shoe_font">Beacon Casual Sneakers</p>
-                            <p class="shoe_font">White Back Strap</p>
-                            <p class="bold shoe_font">460 AED</p>
+                            <p class="bold first_line shoe_font beacon_details">Beacon Casual Sneakers</p>
+                            <p class="shoe_font beacon_details">White Back Strap</p>
+                            <p class="bold shoe_font beacon_details">460 AED</p>
+                        </div>
+
+                    </div>
+
+                    <div class="beacon">
+                        <div class="same" id = "Beacon_main">
+                            <img class="normal scroll_img" src="./scroll_img1.png">
+                            <img class="transition scroll_img" src="./scroll_img1.png">
+                            <p class="bold first_line shoe_font beacon_details">Beacon Casual Sneakers</p>
+                            <p class="shoe_font beacon_details">White Back Strap</p>
+                            <p class="bold shoe_font beacon_details">460 AED</p>
+                        </div>
+
+                    </div>
+
+                    <div class="beacon">
+                        <div class="same" id = "Beacon_main">
+                            <img class="normal scroll_img" src="./scroll_img2.png">
+                            <img class="transition scroll_img" src="./scroll_img2.png">
+                            <p class="bold first_line shoe_font beacon_details">Beacon Casual Sneakers</p>
+                            <p class="shoe_font beacon_details">White Back Strap</p>
+                            <p class="bold shoe_font beacon_details">460 AED</p>
+                        </div>
+
+                    </div>
+
+                    <div class="beacon">
+                        <div class="same" id = "Beacon_main">
+                            <img class="normal scroll_img" src="./scroll_img3.png">
+                            <img class="transition scroll_img" src="././scroll_img3.png">
+                            <p class="bold first_line shoe_font beacon_details">Beacon Casual Sneakers</p>
+                            <p class="shoe_font beacon_details">White Back Strap</p>
+                            <p class="bold shoe_font beacon_details">460 AED</p>
+                        </div>
+
+                    </div>
+
+                    <div class="beacon">
+                        <div class="same" id = "Beacon_main">
+                            <img class="normal scroll_img" src="./scroll_img4.png">
+                            <img class="transition scroll_img" src="./scroll_img4.png">
+                            <p class="bold first_line shoe_font beacon_details">Beacon Casual Sneakers</p>
+                            <p class="shoe_font beacon_details">White Back Strap</p>
+                            <p class="bold shoe_font beacon_details">460 AED</p>
                         </div>
 
                     </div>
@@ -166,7 +260,7 @@
                         <div class="options">
                             <p class="heel">Heel Pain</p>
                             <p class="bunion">Bunions</p>
-                            <p>Deep Vein Thrombosis</p>
+                            <p class="vein">Deep Vein Thrombosis</p>
                         </div>
                         <div class="know">
                             <input type="button" value="Know More">
@@ -182,17 +276,17 @@
             <div class="banner3_footer">
                 <div class="footer_icon">
                     <div class="smiley">
-                        <img src="./smiley.png">
+                        <img class="icon_img" src="./smiley.png">
                         <p>More than 1 Million happy customers served</p>
                     </div>
 
                     <div class="medical">
-                        <img src="./medical.png">
+                        <img class="icon_img" src="./medical.png">
                         <p>Trusted by 5000+ medical professionals</p>
                     </div>
 
                     <div class="tick">
-                        <img src="./tick.png">
+                        <img class="icon_img" src="./tick.png">
                         <p>Every product Comfort Co. Certified</p>
                     </div>
                 </div>
@@ -205,21 +299,21 @@
                     <div class="z_one">
                         <img src="./zoom_one.png">
                         <div class="button1_full">
-                            <button class="button1">WOMEN'S</button>
+                            <button class="button1 button_same" id="button_one">WOMEN'S</button>
                         </div>
                     </div>
 
                     <div class="z_two">
                         <img src="./zoom_two.png">
                         <div class="button2_full">
-                            <button class="button2">MEN'S</button>
+                            <button class="button2 button_same">MEN'S</button>
                         </div>
                     </div>
 
                     <div class="z_three">
                         <img src="./zoom_three.png">
                         <div class="button3_full">
-                            <button class="button3">BRAND'S</button>
+                            <button class="button3 button_same">BRAND'S</button>
                         </div>
                     </div>
                 </div>
@@ -266,10 +360,10 @@
                     <div class="second_content">
                         <div  class="inside_second">
                             <div class="email_div">
-                                <input class="email" type="email" placeholder="Email Address">
+                                <input id= "email_check" class="email" type="email" placeholder="Email Address">
                             </div>
                             <div class="subscribe">
-                                <button class="button_subscribe">Subscribe</button>
+                                <button id="button_check" class="button_subscribe">Subscribe</button>
                             </div>
                         </div>
                     </div>
@@ -280,30 +374,40 @@
 
             <footer>
                 <div class="footer1">
-                    <div class="section1">
+                    <div class="section1 drop_down">
                         <p class="p_top1">Customer Services</p>
-                        <P><a class="footer_link" href="">Return/Exchanges</a></p>
-                        <p><a class="footer_link" href="">Shipping</a></p>
-                        <p><a class="footer_link" href="">Contact Us</a></p>
-                        <p><a class="footer_link" href="">Accessibility</a></p>
+                        <span class="plus" id= "drop1">+</span>
+                        <div id="accordian_one" class="section_drop1">
+                            <p><a class="footer_link" href="">Return/Exchanges</a></p>
+                            <p><a class="footer_link" href="">Shipping</a></p>
+                            <p><a class="footer_link" href="">Contact Us</a></p>
+                            <p><a class="footer_link" href="">Accessibility</a></p>
+                        </div>
                     </div>
 
-                    <div class="section2">
+                    <div class="section2 drop_down">
                         <p class="p_top2">Information</p>
-                        <p><a class="footer_link" href="">Create Account</a>
-                        <p><a class="footer_link" href="">About Us</a></p>
-                        <p><a class="footer_link" href="">Site Map</a></p>
-                        <p><a class="footer_link" href="">Comfort Co. Certified</a></p>
-                        <p><a class="footer_link" href="">Comfy Rewards</a></p>
+                        <span class="plus" id = "drop2">+</span>
+                        <div id="accordian_two" class="section_drop2">
+                            <p><a class="footer_link" href="">Create Account</a>
+                            <p><a class="footer_link" href="">About Us</a></p>
+                            <p><a class="footer_link" href="">Site Map</a></p>
+                            <p><a class="footer_link" href="">Comfort Co. Certified</a></p>
+                            <p><a class="footer_link" href="">Comfy Rewards</a></p>
+                        </div>
                     </div>
 
-                    <div class="section3">
+                    <div class="section3 drop_down">
                         <p class="p_top3">Policies</p>
-                        <p><a class="footer_link" href="">Privacy Policy</a></p>
-                        <p><a class="footer_link" href="">Terms of use</a></p>
+                        
+                        <span class="plus" id = "drop3" >+</span>
+                        <div id="accordian_three" class = "section_drop3">
+                            <p><a class="footer_link" href="">Privacy Policy</a></p>
+                            <p><a class="footer_link" href="">Terms of use</a></p>
+                        </div>
                     </div>
 
-                    <div class="section4">
+                    <div class="section4 drop_down">
                         <div class="inside_section4">
                             <img src="./footer.png">
                             <p class="connect_footer">Connect with us on</p>
@@ -323,6 +427,6 @@
             </footer>
         </main>
 
-        
+        <script src="webpage.js"></script>
     </body>
 </html>
